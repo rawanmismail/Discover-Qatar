@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Zubarah — UNESCO World Heritage Site | Visit Qatar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .timeline{position:relative;padding-left:36px;margin-top:12px}
+    .timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--primary-light)}
+    .timeline-item{position:relative;margin-bottom:32px}
+    .timeline-item::before{content:'';position:absolute;left:-30px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--primary);border:3px solid var(--primary-light)}
+    .timeline-item .tl-year{font-size:0.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:4px}
+    .timeline-item h4{font-size:1rem;margin-bottom:6px}
+    .timeline-item p{font-size:.87rem;margin:0}
+    .highlight-card{background:var(--primary);border-radius:var(--radius-lg);padding:32px 28px;color:white;margin-bottom:20px}
+    .highlight-card.sec{background:var(--secondary)}
+    .highlight-card h3{color:white;font-size:1.1rem;margin-bottom:8px}
+    .highlight-card p{color:rgba(255,255,255,.82);font-size:.88rem;margin:0}
+    .highlight-card .hc-icon{width:44px;height:44px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:white;margin-bottom:14px}
+    .practical-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+    .practical-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 18px}
+    .practical-item .pi-icon{width:38px;height:38px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:.95rem;margin-bottom:10px}
+    .practical-item h4{font-size:.85rem;font-weight:700;margin-bottom:5px;color:var(--text)}
+    .practical-item p{font-size:.81rem;margin:0;color:var(--text-muted)}
+    .photo-mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px;border-radius:var(--radius-lg);overflow:hidden}
+    .pm-main{grid-row:span 2}
+    .pm-img{position:relative;overflow:hidden}
+    .pm-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .pm-img:hover img{transform:scale(1.07)}
+    .pm-img .pm-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent);padding:14px 12px 10px;color:white;font-size:.78rem;font-weight:600;opacity:0;transition:opacity .3s}
+    .pm-img:hover .pm-label{opacity:1}
+    .strip-bar{background:var(--primary);padding:28px 0}
+    .strip-bar .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+    .strip-bar .strip-num{font-size:1.1rem;font-weight:700;font-family:var(--font-display);color:white}
+    .strip-bar .strip-lbl{font-size:.75rem;color:rgba(255,255,255,.65);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+    @media(max-width:768px){.photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto}.pm-main{grid-row:span 1}.strip-bar .strip-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:540px){.photo-mosaic{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div>
+      <div class="logo-text"><span>Visit Qatar</span><span>Official Tourism Portal</span></div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item">
+        <a href="about-qatar.html" class="nav-link">About Qatar <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="about-qatar.html"><i class="fas fa-info-circle"></i>About Qatar</a>
+          <a href="geography.html"><i class="fas fa-map"></i>Geography of Qatar</a>
+          <a href="history.html"><i class="fas fa-landmark"></i>History of Qatar</a>
+          <a href="towns-cities.html"><i class="fas fa-city"></i>Towns and Cities</a>
+          <a href="doha.html"><i class="fas fa-building"></i>Doha</a>
+          <a href="traditions.html"><i class="fas fa-hands"></i>Traditions in Qatar</a>
+          <a href="sports.html"><i class="fas fa-futbol"></i>Sports in Qatar</a>
+          <a href="cuisine.html"><i class="fas fa-utensils"></i>Local Cuisine of Qatar</a>
+          <a href="wildlife.html"><i class="fas fa-paw"></i>Wildlife</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="plan-trip.html" class="nav-link">Plan Your Trip <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="visas.html"><i class="fas fa-passport"></i>Visas</a>
+          <a href="accommodation.html"><i class="fas fa-hotel"></i>Accommodation in Qatar</a>
+          <a href="getting-to-qatar.html"><i class="fas fa-plane-departure"></i>Getting to Qatar</a>
+          <a href="hamad-airport.html"><i class="fas fa-plane"></i>Hamad International Airport</a>
+          <a href="getting-around.html"><i class="fas fa-car"></i>Getting Around</a>
+          <a href="safety.html"><i class="fas fa-shield-alt"></i>Safety in Qatar</a>
+          <a href="travel-tips.html"><i class="fas fa-lightbulb"></i>Travel Tips</a>
+          <a href="concierge.html"><i class="fas fa-concierge-bell"></i>Concierge Service</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="things-to-do.html" class="nav-link">Things To Do <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="adventure-sports.html"><i class="fas fa-hiking"></i>Adventure and Sports</a>
+          <a href="art-culture.html"><i class="fas fa-palette"></i>Art and Culture</a>
+          <a href="romantic-getaway.html"><i class="fas fa-heart"></i>Romantic Getaway</a>
+          <a href="beach-holiday.html"><i class="fas fa-umbrella-beach"></i>Beach Holiday</a>
+          <a href="family-break.html"><i class="fas fa-child"></i>Family Break</a>
+          <a href="dining.html"><i class="fas fa-utensils"></i>Dining</a>
+          <a href="spa-wellness.html"><i class="fas fa-spa"></i>Spa and Wellness</a>
+          <a href="shopping.html"><i class="fas fa-shopping-bag"></i>Shopping</a>
+        </div>
+      </li>
+      <li class="nav-item nav-auth-mobile"><a href="login.html" class="nav-link">Login</a></li>
+      <li class="nav-item nav-auth-mobile"><a href="signup.html" class="nav-link">Sign Up</a></li>
+    </ul>
+    <div class="nav-auth">
+      <a href="login.html" class="btn btn-outline-primary">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub">
+  <img src="images/placeholder.jpg" alt="Al Zubarah Archaeological Site" class="hero-img">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-label">UNESCO World Heritage Site &mdash; Inscribed 2013</span>
+      <h1 class="hero-title">Al Zubarah &mdash; <span>Where History Lives</span></h1>
+      <p class="hero-desc">Step inside the walls of an 18th-century pearling city frozen in time. Qatar's most extraordinary archaeological treasure and one of the best-preserved historic towns in the Arabian Gulf.</p>
+      <div class="hero-cta">
+        <a href="plan-trip.html" class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Plan Your Visit</a>
+        <a href="history.html" class="btn btn-outline"><i class="fas fa-landmark"></i> Qatar's History</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="sep"><i class="fas fa-chevron-right"></i></li>
+      <li><a href="about-qatar.html">About Qatar</a></li>
+      <li class="sep"><i class="fas fa-chevron-right"></i></li>
+      <li><a href="towns-cities.html">Towns and Cities</a></li>
+      <li class="sep"><i class="fas fa-chevron-right"></i></li>
+      <li>Al Zubarah</li>
+    </ul>
+  </div>
+</nav>
+
+<!-- QUICK STATS STRIP -->
+<div class="strip-bar">
+  <div class="container">
+    <div class="strip-grid">
+      <div><i class="fas fa-globe" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">UNESCO</div><div class="strip-lbl">World Heritage Site</div></div>
+      <div><i class="fas fa-ruler-combined" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">60 Ha</div><div class="strip-lbl">Archaeological Zone</div></div>
+      <div><i class="fas fa-history" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">1760s</div><div class="strip-lbl">City Founded</div></div>
+      <div><i class="fas fa-road" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">105 km</div><div class="strip-lbl">From Doha</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section-pad">
+  <div class="container">
+    <div class="info-layout">
+
+      <div class="info-content">
+        <span class="section-label">About Al Zubarah</span>
+        <h2>A Lost City Reclaimed by Time</h2>
+        <p>Al Zubarah is one of the most evocative and significant historic sites in the Arabian Peninsula. Located on Qatar's remote north-western coast, this hauntingly beautiful ghost town preserves the ruins of a once-thriving pearling and trading city that flourished between the 1760s and 1810s before being abandoned to the desert winds.</p>
+        <p>Today the site is protected as a UNESCO World Heritage Site — inscribed in 2013 — and is recognised internationally as an outstanding example of a Gulf pearling settlement. Walking through its silent streets, past the remnants of courtyard houses, mosques, market stalls, and harbour installations, is an experience unlike anything else in Qatar.</p>
+
+        <img src="images/placeholder.jpg" alt="Al Zubarah ruins aerial view" style="margin:32px 0;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);">
+
+        <!-- TABS -->
+        <div class="tab-group">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="see">What to See</button>
+            <button class="tab-btn" data-tab="fort">The Fort</button>
+            <button class="tab-btn" data-tab="nature">Nature &amp; Wildlife</button>
+            <button class="tab-btn" data-tab="visit">Visitor Tips</button>
+          </div>
+
+          <div class="tab-panel active" data-panel="see">
+            <h3 style="margin-top:28px;color:var(--primary);">The Archaeological Ruins</h3>
+            <p>The Al Zubarah Archaeological Site covers approximately 60 hectares and contains the preserved ruins of one of the most complete 18th-century Gulf settlements ever discovered. Ongoing joint Danish-Qatari excavations have revealed an exceptional urban landscape: a planned city with straight streets, dense housing blocks, a large central mosque, a smaller harbour mosque, market buildings, and workshops.</p>
+            <p>The city was enclosed by a defensive wall with square towers at regular intervals. Beyond the wall ran a broad moat — one of the few such defensive features recorded in the Gulf region. The harbour area to the north-west shows evidence of substantial maritime infrastructure, reflecting Al Zubarah's role as a major pearling and trading port with trade connections stretching across the Indian Ocean world.</p>
+            <p>Visitors can walk freely through much of the site along marked interpretation paths. Reading panels bring the ruins to life, and the sheer scale of the remains gives a powerful sense of how significant this city once was in the Gulf's commercial and political world.</p>
+            <div class="icon-boxes" style="margin-top:28px;">
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-mosque"></i></div><h4>Great Mosque Ruins</h4><p>The foundations and lower walls of the city's central mosque are among the most impressive and moving structures on the entire site.</p></div>
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-home"></i></div><h4>Courtyard Houses</h4><p>Row upon row of traditional courtyard house foundations reveal the dense, highly organised urban fabric of the lost city at its height.</p></div>
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-water"></i></div><h4>Harbour &amp; Moat</h4><p>The remains of harbour installations and the city's defensive moat are clearly visible and remarkable in their scale and preservation.</p></div>
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-store"></i></div><h4>Market District</h4><p>Excavations have uncovered the foundations of market buildings and craft workshops that once served the city's four thousand inhabitants.</p></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="fort">
+            <h3 style="margin-top:28px;color:var(--primary);">Al Zubarah Fort — Gateway to the Site</h3>
+            <p>Standing sentinel at the entrance to the archaeological site, Al Zubarah Fort is a beautifully preserved example of Qatari military architecture from the early 20th century. Built in 1938 on the foundations of an earlier watchtower, the fort served as a police post guarding the remote north-western coast until the 1980s, when it was decommissioned and restored as a heritage site.</p>
+            <p>Today the fort houses the site's visitor centre and a compelling permanent exhibition. Ground floor galleries present artefacts excavated from the ruins — pottery, glassware, metalwork, coins, and personal objects — alongside detailed maps, architectural drawings, and photographs documenting the ongoing excavations. Commentary boards weave these objects into the human stories of the city's former inhabitants.</p>
+            <p>The fort's design is classically Qatari: thick coral and limestone walls, round corner towers with crenellated battlements, and a shaded central courtyard. Climbing to the roof terrace rewards visitors with sweeping panoramic views across the flat, wind-swept landscape to the shimmering waters of the Gulf on the horizon — a view that has changed very little in centuries.</p>
+            <div style="background:var(--bg-alt);border-radius:var(--radius-lg);padding:24px;margin-top:28px;">
+              <h4 style="margin-bottom:14px;color:var(--primary);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Fort Opening Hours &amp; Entry</h4>
+              <ul style="list-style:none;padding:0;">
+                <li style="display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text-muted);"><i class="fas fa-sun" style="color:var(--primary);width:16px;margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--text);">Saturday – Thursday:</strong>&nbsp; 9:00 AM – 7:00 PM</span></li>
+                <li style="display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text-muted);"><i class="fas fa-moon" style="color:var(--primary);width:16px;margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--text);">Friday:</strong>&nbsp; 2:00 PM – 7:00 PM</span></li>
+                <li style="display:flex;gap:12px;padding:9px 0;font-size:.87rem;color:var(--text-muted);"><i class="fas fa-ticket-alt" style="color:var(--primary);width:16px;margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--text);">Admission:</strong>&nbsp; Free of charge for all visitors</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="nature">
+            <h3 style="margin-top:28px;color:var(--primary);">A Wild and Undisturbed Natural Setting</h3>
+            <p>The remote location of Al Zubarah means it is surrounded by some of the most undisturbed natural landscapes in Qatar. The coastline to the north and west is characterised by extensive tidal mudflats, shallow lagoons, and patches of mangrove, supporting extraordinarily rich birdlife throughout the year.</p>
+            <p>Greater flamingos are perhaps the most spectacular residents, gathering in large wading flocks on the tidal flats, their vivid pink plumage striking against the white salt flats and turquoise water. Herons — grey, purple, and reef — are ever-present, as are a wide variety of waders, terns, cormorants, and gulls. The site lies on the East Atlantic Flyway, one of the world's great migratory bird routes, meaning that from September to April, Al Zubarah may receive rare and unusual species passing through Qatar on their annual journeys between Eurasia and Africa.</p>
+            <p>The surrounding desert supports its own quiet community of wildlife. Desert hares, sand gazelles, and numerous lizard species have adapted to the harsh conditions, and the early morning and late afternoon hours offer the best opportunities to observe their activity against the backdrop of the ancient ruins.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="visit">
+            <h3 style="margin-top:28px;color:var(--primary);">Planning Your Visit</h3>
+            <p style="margin-bottom:20px;">Al Zubarah rewards those who plan ahead. Here is everything you need to know to make the most of your trip to Qatar's most remote major heritage site.</p>
+            <div class="practical-grid">
+              <div class="practical-item"><div class="pi-icon"><i class="fas fa-car"></i></div><h4>Getting There</h4><p>Drive north on Al Shamal Road then west towards Al Ruwais. The site is signposted. Allow 90 minutes from Doha. Car hire is recommended.</p></div>
+              <div class="practical-item"><div class="pi-icon"><i class="fas fa-clock"></i></div><h4>Time Needed</h4><p>Allow 2–3 hours minimum for the fort and site. A half-day is ideal, especially if combining with birdwatching along the coast.</p></div>
+              <div class="practical-item"><div class="pi-icon"><i class="fas fa-thermometer-half"></i></div><h4>Best Season</h4><p>October to April for comfortable temperatures. Summer visits are possible but intense heat demands an early start and plenty of water.</p></div>
+              <div class="practical-item"><div class="pi-icon"><i class="fas fa-tshirt"></i></div><h4>What to Wear</h4><p>Sturdy walking shoes are essential — the site is vast and the ground uneven. A wide-brimmed hat and light layers are strongly advised.</p></div>
+              <div class="practical-item"><div class="pi-icon"><i class="fas fa-camera"></i></div><h4>Photography</h4><p>Photography is welcomed throughout. The ruins photograph beautifully in the golden light of early morning and late afternoon.</p></div>
+              <div class="practical-item"><div class="pi-icon"><i class="fas fa-utensils"></i></div><h4>Food &amp; Drink</h4><p>No restaurants at the site. Bring water and snacks. Nearest food is in Al Ruwais town, approximately 15 km to the north.</p></div>
+            </div>
+          </div>
+        </div>
+        <!-- end tabs -->
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="info-sidebar">
+        <div class="sidebar-card">
+          <h4>At a Glance</h4>
+          <ul>
+            <li><i class="fas fa-globe"></i><div><strong>Status:</strong> UNESCO World Heritage Site</div></li>
+            <li><i class="fas fa-calendar-check"></i><div><strong>Inscribed:</strong> 2013</div></li>
+            <li><i class="fas fa-map-marker-alt"></i><div><strong>Location:</strong> North-west Qatar</div></li>
+            <li><i class="fas fa-road"></i><div><strong>From Doha:</strong> 105 km (~90 min)</div></li>
+            <li><i class="fas fa-ruler-combined"></i><div><strong>Site Area:</strong> 60 hectares</div></li>
+            <li><i class="fas fa-ticket-alt"></i><div><strong>Entry:</strong> Free of charge</div></li>
+            <li><i class="fas fa-clock"></i><div><strong>Opens:</strong> 9:00 AM daily</div></li>
+            <li><i class="fas fa-parking"></i><div><strong>Parking:</strong> Free, on-site</div></li>
+          </ul>
+        </div>
+
+        <div class="highlight-card">
+          <div class="hc-icon"><i class="fas fa-award"></i></div>
+          <h3>UNESCO Recognition</h3>
+          <p>Al Zubarah was inscribed on the UNESCO World Heritage List in 2013 as an outstanding example of a Gulf pearling and trading settlement of exceptional universal value.</p>
+        </div>
+
+        <div class="highlight-card sec">
+          <div class="hc-icon"><i class="fas fa-microscope"></i></div>
+          <h3>Live Excavations</h3>
+          <p>Danish and Qatari archaeologists continue excavating the site. Visitors may observe active digs in progress — new discoveries are made regularly.</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Combine Your Visit</h4>
+          <ul>
+            <li><i class="fas fa-arrow-right"></i><a href="al-khor.html">Al Khor Mangroves</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="wildlife.html">Qatar Wildlife Guide</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="history.html">History of Qatar</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="art-culture.html">Art &amp; Culture</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="adventure-sports.html">Desert Adventures</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO MOSAIC -->
+<section class="section-pad-sm bg-alt">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title">Al Zubarah Through the Lens</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="photo-mosaic">
+      <div class="pm-img pm-main"><img src="images/placeholder.jpg" alt="Al Zubarah archaeological ruins"><div class="pm-label">The Archaeological Ruins</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Al Zubarah Fort exterior"><div class="pm-label">Al Zubarah Fort</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Flamingos at Al Zubarah coast"><div class="pm-label">Coastal Flamingos</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Fort museum artefacts"><div class="pm-label">Fort Museum Exhibits</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Desert sunset Al Zubarah"><div class="pm-label">Desert Sunset</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY TIMELINE -->
+<section class="section-pad">
+  <div class="container">
+    <div style="max-width:780px;margin:0 auto;">
+      <div class="text-center" style="margin-bottom:48px;">
+        <span class="section-label">Through the Centuries</span>
+        <h2 class="section-title">The Story of Al Zubarah</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-year">c. 1760s</div>
+          <h4>Foundation of the City</h4>
+          <p>Al Zubarah is established on Qatar's north-western coast by Utub tribal groups — primarily the Al Khalifa and Al Jalahma clans — attracted by offshore pearl banks and a strategic position on Gulf trade routes.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-year">Late 18th Century</div>
+          <h4>Peak of Prosperity</h4>
+          <p>At its height, Al Zubarah reaches a population of approximately 4,000 people and becomes one of the most prosperous trading towns in the Gulf, dealing in pearls, fish, horses, and goods from India, Persia, and East Africa.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-year">1811</div>
+          <h4>Destruction and Abandonment</h4>
+          <p>Following regional conflicts, Al Zubarah is attacked and largely destroyed. The population disperses and the city is abandoned, its buildings gradually reclaimed by wind-blown sand over the following decades.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-year">1938</div>
+          <h4>Al Zubarah Fort Built</h4>
+          <p>The Qatari government constructs a police fort at the site to assert sovereignty over the north-western coast. It is built on the foundations of an earlier watchtower and serves as a remote border post for several decades.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-year">1980s–2000s</div>
+          <h4>Archaeological Discovery</h4>
+          <p>A joint Danish-Qatari archaeological project begins systematic excavation, gradually revealing the remarkable extent and integrity of the buried city. The scale of the discoveries surpasses all initial expectations.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-year">2013</div>
+          <h4>UNESCO World Heritage Inscription</h4>
+          <p>Al Zubarah Archaeological Site is inscribed on the UNESCO World Heritage List, recognising its outstanding universal value as one of the best-preserved examples of an 18th and early 19th-century Gulf pearling town.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-year">Today</div>
+          <h4>An Active, Living Heritage Site</h4>
+          <p>Excavations continue, the fort museum draws thousands of visitors annually, and Al Zubarah is firmly established as one of the most important heritage tourism destinations in the entire Arabian Gulf region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEARBY CITIES -->
+<section class="section-pad-sm bg-alt">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:36px;">
+      <span class="section-label">Keep Exploring</span>
+      <h2 class="section-title">Other Cities in Qatar</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card"><div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Doha"><span class="card-tag">Capital City</span></div><div class="card-body"><h3>Doha</h3><p>The gleaming capital where world-class museums, the Corniche, Souq Waqif, and a spectacular skyline await your exploration.</p><a href="doha.html" class="card-link">Discover Doha <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="card"><div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Al Wakra"><span class="card-tag">Historic Town</span></div><div class="card-body"><h3>Al Wakra</h3><p>Qatar's best-preserved historic fishing town with a lovingly restored souq, traditional harbour, and the stunning Zaha Hadid stadium.</p><a href="al-wakra.html" class="card-link">Visit Al Wakra <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="card"><div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Al Khor"><span class="card-tag">Northern Qatar</span></div><div class="card-body"><h3>Al Khor</h3><p>Mangrove forests, a charming corniche, and a genuine coastal character make Al Khor a rewarding half-day trip from Doha.</p><a href="al-khor.html" class="card-link">Explore Al Khor <i class="fas fa-arrow-right"></i></a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready to Step Back in Time?</h2>
+    <p>Plan your journey to Al Zubarah and experience one of the Arabian Gulf's greatest heritage treasures for yourself.</p>
+    <div class="btn-group">
+      <a href="plan-trip.html" class="btn btn-outline"><i class="fas fa-map-marked-alt"></i> Plan Your Trip</a>
+      <a href="concierge.html" class="btn btn-outline"><i class="fas fa-concierge-bell"></i> Arrange a Tour</a>
+      <a href="towns-cities.html" class="btn btn-outline"><i class="fas fa-city"></i> All Cities</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div><span>Visit Qatar</span></div>
+        <p>Your official guide to discovering the wonders of Qatar. From the shimmering skyline of Doha to the serene deserts and cultural heritage sites, we invite you to explore a land of extraordinary contrasts.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="about-qatar.html">About Qatar</a></li><li><a href="towns-cities.html">Towns &amp; Cities</a></li>
+        <li><a href="things-to-do.html">Things To Do</a></li><li><a href="plan-trip.html">Plan Your Trip</a></li>
+        <li><a href="visas.html">Visas &amp; Entry</a></li><li><a href="events.html">Events &amp; Festivals</a></li>
+        <li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+        <li><i class="fas fa-map-marker-alt"></i><span>Qatar Tourism Authority, West Bay, Doha, Qatar</span></li>
+        <li><i class="fas fa-phone"></i><span>+974 4000 1234</span></li>
+        <li><i class="fas fa-envelope"></i><span>info@visitqatar.qa</span></li>
+        <li><i class="fas fa-clock"></i><span>Sun – Thu: 8:00 AM – 5:00 PM</span></li>
+      </ul></div>
+      <div class="footer-col footer-newsletter"><h4>Newsletter</h4>
+        <p>Subscribe for the latest news, events, and travel inspiration from Qatar.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="text" placeholder="Your full name" required>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container"><div class="footer-bottom">
+    <span>&copy; 2025 Visit Qatar. All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Sitemap</a></span>
+  </div></div>
+</footer>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="script.js"></script>
+</body>
+</html>
