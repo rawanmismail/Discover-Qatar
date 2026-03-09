@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Wakra — Historic Coastal Town | Visit Qatar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .strip-bar{background:var(--primary);padding:28px 0}
+    .strip-bar .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+    .strip-bar .strip-num{font-size:1.1rem;font-weight:700;font-family:var(--font-display);color:white}
+    .strip-bar .strip-lbl{font-size:.75rem;color:rgba(255,255,255,.65);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+    .highlight-card{background:var(--primary);border-radius:var(--radius-lg);padding:32px 28px;color:white;margin-bottom:20px}
+    .highlight-card.sec{background:var(--secondary)}
+    .highlight-card h3{color:white;font-size:1.1rem;margin-bottom:8px}
+    .highlight-card p{color:rgba(255,255,255,.82);font-size:.88rem;margin:0}
+    .highlight-card .hc-icon{width:44px;height:44px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:white;margin-bottom:14px}
+    .practical-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+    .practical-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 18px}
+    .practical-item .pi-icon{width:38px;height:38px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:.95rem;margin-bottom:10px}
+    .practical-item h4{font-size:.85rem;font-weight:700;margin-bottom:5px;color:var(--text)}
+    .practical-item p{font-size:.81rem;margin:0;color:var(--text-muted)}
+    .photo-mosaic{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:240px 240px;gap:12px;border-radius:var(--radius-lg);overflow:hidden}
+    .pm-main{grid-row:span 2;grid-column:span 1}
+    .pm-img{position:relative;overflow:hidden}
+    .pm-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .pm-img:hover img{transform:scale(1.07)}
+    .pm-img .pm-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent);padding:14px 12px 10px;color:white;font-size:.78rem;font-weight:600;opacity:0;transition:opacity .3s}
+    .pm-img:hover .pm-label{opacity:1}
+    .neighbourhood-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all .3s}
+    .neighbourhood-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
+    .neighbourhood-card .nc-img{aspect-ratio:16/9;overflow:hidden}
+    .neighbourhood-card .nc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .neighbourhood-card:hover .nc-img img{transform:scale(1.05)}
+    .neighbourhood-card .nc-body{padding:20px}
+    .neighbourhood-card .nc-body h4{font-size:1rem;margin-bottom:6px}
+    .neighbourhood-card .nc-body p{font-size:.86rem;margin:0}
+    @media(max-width:768px){.photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto}.pm-main{grid-row:span 1}.strip-bar .strip-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:540px){.photo-mosaic{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div>
+      <div class="logo-text"><span>Visit Qatar</span><span>Official Tourism Portal</span></div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item">
+        <a href="about-qatar.html" class="nav-link">About Qatar <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="about-qatar.html"><i class="fas fa-info-circle"></i>About Qatar</a>
+          <a href="geography.html"><i class="fas fa-map"></i>Geography of Qatar</a>
+          <a href="history.html"><i class="fas fa-landmark"></i>History of Qatar</a>
+          <a href="towns-cities.html"><i class="fas fa-city"></i>Towns and Cities</a>
+          <a href="doha.html"><i class="fas fa-building"></i>Doha</a>
+          <a href="traditions.html"><i class="fas fa-hands"></i>Traditions in Qatar</a>
+          <a href="sports.html"><i class="fas fa-futbol"></i>Sports in Qatar</a>
+          <a href="cuisine.html"><i class="fas fa-utensils"></i>Local Cuisine of Qatar</a>
+          <a href="wildlife.html"><i class="fas fa-paw"></i>Wildlife</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="plan-trip.html" class="nav-link">Plan Your Trip <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="visas.html"><i class="fas fa-passport"></i>Visas</a>
+          <a href="accommodation.html"><i class="fas fa-hotel"></i>Accommodation in Qatar</a>
+          <a href="getting-to-qatar.html"><i class="fas fa-plane-departure"></i>Getting to Qatar</a>
+          <a href="hamad-airport.html"><i class="fas fa-plane"></i>Hamad International Airport</a>
+          <a href="getting-around.html"><i class="fas fa-car"></i>Getting Around</a>
+          <a href="safety.html"><i class="fas fa-shield-alt"></i>Safety in Qatar</a>
+          <a href="travel-tips.html"><i class="fas fa-lightbulb"></i>Travel Tips</a>
+          <a href="concierge.html"><i class="fas fa-concierge-bell"></i>Concierge Service</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="things-to-do.html" class="nav-link">Things To Do <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="adventure-sports.html"><i class="fas fa-hiking"></i>Adventure and Sports</a>
+          <a href="art-culture.html"><i class="fas fa-palette"></i>Art and Culture</a>
+          <a href="romantic-getaway.html"><i class="fas fa-heart"></i>Romantic Getaway</a>
+          <a href="beach-holiday.html"><i class="fas fa-umbrella-beach"></i>Beach Holiday</a>
+          <a href="family-break.html"><i class="fas fa-child"></i>Family Break</a>
+          <a href="dining.html"><i class="fas fa-utensils"></i>Dining</a>
+          <a href="spa-wellness.html"><i class="fas fa-spa"></i>Spa and Wellness</a>
+          <a href="shopping.html"><i class="fas fa-shopping-bag"></i>Shopping</a>
+        </div>
+      </li>
+      <li class="nav-item nav-auth-mobile"><a href="login.html" class="nav-link">Login</a></li>
+      <li class="nav-item nav-auth-mobile"><a href="signup.html" class="nav-link">Sign Up</a></li>
+    </ul>
+    <div class="nav-auth">
+      <a href="login.html" class="btn btn-outline-primary">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub">
+  <img src="images/placeholder.jpg" alt="Al Wakra Old Town" class="hero-img">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-label">Historic Coastal Town &mdash; Southern Qatar</span>
+      <h1 class="hero-title">Al Wakra &mdash; <span>Old Qatar, Beautifully Alive</span></h1>
+      <p class="hero-desc">One of Qatar's oldest and most lovingly preserved towns. Where pearl-diving heritage, traditional architecture, a lively souq, and a world-class stadium exist side by side on the Gulf coast.</p>
+      <div class="hero-cta">
+        <a href="plan-trip.html" class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Plan Your Visit</a>
+        <a href="traditions.html" class="btn btn-outline"><i class="fas fa-anchor"></i> Qatar's Heritage</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="sep"><i class="fas fa-chevron-right"></i></li>
+      <li><a href="about-qatar.html">About Qatar</a></li>
+      <li class="sep"><i class="fas fa-chevron-right"></i></li>
+      <li><a href="towns-cities.html">Towns and Cities</a></li>
+      <li class="sep"><i class="fas fa-chevron-right"></i></li>
+      <li>Al Wakra</li>
+    </ul>
+  </div>
+</nav>
+
+<!-- STATS STRIP -->
+<div class="strip-bar">
+  <div class="container">
+    <div class="strip-grid">
+      <div><i class="fas fa-history" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">Oldest</div><div class="strip-lbl">Town in Qatar</div></div>
+      <div><i class="fas fa-road" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">15 km</div><div class="strip-lbl">From Doha</div></div>
+      <div><i class="fas fa-users" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">300K+</div><div class="strip-lbl">Population</div></div>
+      <div><i class="fas fa-futbol" style="font-size:1.3rem;color:rgba(255,255,255,.7);display:block;margin-bottom:6px;"></i><div class="strip-num">Zaha Hadid</div><div class="strip-lbl">World Cup Stadium</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section-pad">
+  <div class="container">
+    <div class="info-layout">
+
+      <div class="info-content">
+        <span class="section-label">About Al Wakra</span>
+        <h2>Where Qatar's Soul Endures</h2>
+        <p>Al Wakra is one of Qatar's oldest continuously inhabited towns, situated just 15 kilometres south of Doha along the Gulf coast. Historically, it was the second most important settlement in Qatar after Doha, a prosperous pearling and fishing centre whose merchants were respected throughout the Gulf region. Today, with a population exceeding 300,000 people, Al Wakra has grown into a major city — yet remarkably, it has managed to preserve the architecture, character, and unhurried spirit of its historic heart.</p>
+        <p>Visitors who make the short journey from the capital are rewarded with an authentic taste of old Qatar that even Doha, for all its charms, cannot replicate. The Old Town district — centred on the restored souq and waterfront — is a genuinely living heritage area, not a museum piece, where families shop, fishermen bring their catch, and the rhythms of daily Qatari life continue as they have for generations.</p>
+
+        <img src="images/placeholder.jpg" alt="Al Wakra traditional waterfront houses" style="margin:32px 0;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);">
+
+        <!-- TABS -->
+        <div class="tab-group">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="souq">The Old Town</button>
+            <button class="tab-btn" data-tab="harbour">Harbour &amp; Corniche</button>
+            <button class="tab-btn" data-tab="stadium">Al Janoub Stadium</button>
+            <button class="tab-btn" data-tab="eat">Dining &amp; Local Food</button>
+          </div>
+
+          <div class="tab-panel active" data-panel="souq">
+            <h3 style="margin-top:28px;color:var(--primary);">Al Wakra Souq &amp; Old Town</h3>
+            <p>The Al Wakra Souq is one of the most charming and authentic traditional markets in all of Qatar. Unlike the more internationally famous Souq Waqif in Doha, Al Wakra Souq retains a genuine local character — it is a place primarily for the people of Al Wakra, not tourists, which gives it an entirely different, more intimate atmosphere. Stalls sell fresh fish, vegetables, traditional handicrafts, fabrics, and everyday household goods in an atmospheric warren of narrow lanes and open courtyards shaded by traditional reed roofing.</p>
+            <p>The surrounding Old Town district is a particularly rewarding place to wander. The buildings have been carefully restored using traditional materials and techniques — coral stone walls, carved wooden window screens (rawasheen), ornate plasterwork above doorways, and distinctive wind towers designed to catch and funnel sea breezes into the buildings below. Many of the finest examples of traditional Qatari domestic architecture in the country are found here.</p>
+            <p>The Al Wakra Museum, housed in a beautifully restored traditional home adjacent to the souq, documents the pearling and fishing heritage of the town through artefacts, photographs, and personal objects from the city's prosperous past. The exhibits include traditional diving equipment — baskets, wooden nose clips, and leather fingertip protectors — alongside model dhows, pearl sorting tools, and a re-created diver's sleeping platform.</p>
+            <div class="icon-boxes" style="margin-top:28px;">
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-store"></i></div><h4>Traditional Souq</h4><p>Browse stalls selling handicrafts, fresh produce, spices, and traditional goods in one of Qatar's most authentic local markets.</p></div>
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-landmark"></i></div><h4>Heritage Architecture</h4><p>Marvel at lovingly restored coral-stone buildings with carved wooden screens, wind towers, and ornate traditional details.</p></div>
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-museum"></i></div><h4>Al Wakra Museum</h4><p>Explore the pearl diving and fishing heritage of the town in a beautifully converted traditional Qatari house.</p></div>
+              <div class="icon-box"><div class="icon-wrap"><i class="fas fa-walking"></i></div><h4>Heritage Walking Trail</h4><p>A marked walking trail leads visitors through the most significant historic buildings and spaces of the old town.</p></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="harbour">
+            <h3 style="margin-top:28px;color:var(--primary);">The Corniche and Traditional Harbour</h3>
+            <p>Al Wakra's corniche traces the gentle curve of a natural bay, offering a beautifully landscaped waterfront promenade with views across the sheltered harbour to the open Gulf beyond. This is one of the most peaceful and picturesque waterfronts in Qatar — far less busy than the Doha Corniche, and all the more enjoyable for it.</p>
+            <p>The traditional fishing harbour at the southern end of the corniche is the soul of Al Wakra. Colourful traditional wooden dhows bob at anchor, their hulls a patchwork of blues, greens, and reds. In the early morning, fishing boats return with the night's catch, and the adjacent fish market comes alive with the sounds and smells of trade that have echoed through this harbour for centuries. It is one of the few places in Qatar where the old way of life of the Gulf fisherman can still be observed in full, authentic action.</p>
+            <p>The corniche is particularly beautiful at golden hour. As the sun descends towards the Gulf, the traditional buildings of the waterfront are bathed in warm light and the still water of the bay mirrors the colours of the sky. Joggers, families, and couples make the most of the cooler evenings on the promenade, enjoying the refreshing sea breeze and the unhurried atmosphere of Al Wakra at its most charming.</p>
+            <div style="background:var(--primary-light);border-radius:var(--radius-lg);padding:24px;margin-top:24px;display:flex;gap:16px;align-items:flex-start;">
+              <i class="fas fa-info-circle" style="color:var(--primary);font-size:1.2rem;flex-shrink:0;margin-top:3px;"></i>
+              <p style="margin:0;font-size:.88rem;color:var(--text-muted);">The Al Wakra fish market is most active between 6:00 AM and 9:00 AM on weekday mornings. Visitors are welcome to observe — the colourful displays of fresh catch and the lively trading atmosphere make it an unmissable experience for those who are up early enough.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="stadium">
+            <h3 style="margin-top:28px;color:var(--primary);">Al Janoub Stadium — A World Cup Legacy</h3>
+            <p>One of the most striking and architecturally celebrated of the 2022 FIFA World Cup venues, Al Janoub Stadium is located on the edge of Al Wakra city and stands as one of the great legacies of that tournament for the local community. The stadium was designed by the late Dame Zaha Hadid — one of the world's most renowned architects — and her firm Zaha Hadid Architects, and draws its visual inspiration from the hull of a traditional dhow sailing boat, a fitting tribute to Al Wakra's maritime heritage.</p>
+            <p>With a capacity of 40,000 during the World Cup (now reconfigured to 20,000 for regular use), the stadium hosted six group stage matches and one round of sixteen during the tournament. Its flowing, organic form — gleaming white curves echoing sails billowing in the wind — makes it one of the most photographed structures in Qatar and a genuine piece of 21st-century architectural art.</p>
+            <p>Today Al Janoub Stadium serves as the home ground of Al Wakra Sports Club and hosts regular Qatar Stars League matches. The stadium is also open for stadium tours on non-match days, offering visitors a chance to walk the pitch-side and explore the player facilities. The surrounding development includes a waterfront promenade, restaurants, and open public spaces that have transformed the southern waterfront of the city.</p>
+            <a href="sports.html" class="btn btn-outline-primary" style="margin-top:16px;display:inline-flex;"><i class="fas fa-futbol"></i> Sports in Qatar</a>
+          </div>
+
+          <div class="tab-panel" data-panel="eat">
+            <h3 style="margin-top:28px;color:var(--primary);">Dining in Al Wakra</h3>
+            <p>Al Wakra's dining scene is unpretentious, generous, and deeply authentic. The restaurants surrounding the souq and corniche serve some of the finest traditional Qatari and Gulf cooking available outside of a private home — the kind of food that local families return to week after week. Fresh fish, caught that morning from the harbour visible through the restaurant window, is the undisputed star of the table.</p>
+            <p>Grilled hammour (orange-spotted grouper) is a signature dish — the firm, sweet flesh of this beloved Gulf fish needs little more than a little heat, fresh bread, and a squeeze of lemon. Machboos samak (spiced fish rice), sayadieh (Lebanese-style fish with caramelised onion rice), and muhammar (sweet date rice) are other dishes you will encounter on menus throughout the town.</p>
+            <p>The souq area also has several simple outdoor cafes serving strong Arabic coffee, karak chai (spiced milk tea), and freshly made juices. These informal spots, with their plastic chairs and tables spilling onto the lanes of the market, are perfect for a mid-morning rest and an insight into the social life of the town. Several more contemporary restaurants and international fast food options have opened in the newer parts of the city around the stadium development.</p>
+            <a href="cuisine.html" class="btn btn-outline-primary" style="margin-top:16px;display:inline-flex;"><i class="fas fa-utensils"></i> Qatari Cuisine Guide</a>
+          </div>
+        </div>
+        <!-- end tabs -->
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="info-sidebar">
+        <div class="sidebar-card">
+          <h4>At a Glance</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i><div><strong>Location:</strong> South of Doha</div></li>
+            <li><i class="fas fa-road"></i><div><strong>From Doha:</strong> 15 km (~20 min)</div></li>
+            <li><i class="fas fa-users"></i><div><strong>Population:</strong> 300,000+</div></li>
+            <li><i class="fas fa-anchor"></i><div><strong>Character:</strong> Historic fishing town</div></li>
+            <li><i class="fas fa-star"></i><div><strong>Known for:</strong> Souq, Harbour, Stadium</div></li>
+            <li><i class="fas fa-clock"></i><div><strong>Best Time:</strong> Oct – Apr</div></li>
+            <li><i class="fas fa-car"></i><div><strong>Transport:</strong> Car, taxi, bus</div></li>
+            <li><i class="fas fa-ticket-alt"></i><div><strong>Souq Entry:</strong> Free</div></li>
+          </ul>
+        </div>
+
+        <div class="highlight-card">
+          <div class="hc-icon"><i class="fas fa-anchor"></i></div>
+          <h3>Pearl Diving Heritage</h3>
+          <p>Al Wakra was historically Qatar's second most important pearling town. Its harbour, souq, and museum preserve this maritime legacy in remarkable detail.</p>
+        </div>
+
+        <div class="highlight-card sec">
+          <div class="hc-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Zaha Hadid Architecture</h3>
+          <p>Al Janoub Stadium, designed by the late Dame Zaha Hadid, is one of the most beautiful buildings in Qatar and a must-see for architecture enthusiasts.</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Top Attractions</h4>
+          <ul>
+            <li><i class="fas fa-store"></i><span>Al Wakra Souq</span></li>
+            <li><i class="fas fa-water"></i><span>Corniche &amp; Harbour</span></li>
+            <li><i class="fas fa-museum"></i><span>Al Wakra Museum</span></li>
+            <li><i class="fas fa-futbol"></i><span>Al Janoub Stadium</span></li>
+            <li><i class="fas fa-fish"></i><span>Morning Fish Market</span></li>
+            <li><i class="fas fa-walking"></i><span>Heritage Walking Trail</span></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Getting to Al Wakra</h4>
+          <ul>
+            <li><i class="fas fa-car"></i><span>Car: 20 min south on E-Ring Road</span></li>
+            <li><i class="fas fa-taxi"></i><span>Taxi: ~20 min from Doha centre</span></li>
+            <li><i class="fas fa-bus"></i><span>Bus: Regular services from Doha</span></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>GPS: Al Wakra Souq, Al Wakra</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO MOSAIC -->
+<section class="section-pad-sm bg-alt">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title">Al Wakra in Pictures</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="photo-mosaic">
+      <div class="pm-img pm-main"><img src="images/placeholder.jpg" alt="Al Wakra Old Town waterfront"><div class="pm-label">Traditional Waterfront</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Al Wakra Souq lanes"><div class="pm-label">Souq Alleyways</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Al Wakra fishing harbour"><div class="pm-label">Traditional Harbour</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Al Janoub Stadium"><div class="pm-label">Al Janoub Stadium</div></div>
+      <div class="pm-img"><img src="images/placeholder.jpg" alt="Al Wakra Corniche sunset"><div class="pm-label">Corniche at Sunset</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBOURHOOD DISTRICTS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">Explore the City</span>
+      <h2 class="section-title">Districts of Al Wakra</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Al Wakra is a city of contrasts — ancient streets beside modern boulevards, fishing dhows moored below gleaming stadium lights.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Al Wakra Old Town"><span class="card-tag">Heritage</span></div>
+        <div class="card-body">
+          <h3>The Old Town</h3>
+          <p>The historic heart of Al Wakra — restored coral-stone buildings, winding lanes, the traditional souq, and the waterfront museum quarter make this the essential destination for any visitor.</p>
+          <a href="#" class="card-link">Old Town <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Al Wakra Stadium Quarter"><span class="card-tag">Modern</span></div>
+        <div class="card-body">
+          <h3>Stadium Quarter</h3>
+          <p>The new southern waterfront development built around Al Janoub Stadium brings restaurants, public spaces, and the extraordinary architecture of Zaha Hadid to the Gulf shore.</p>
+          <a href="#" class="card-link">Stadium Quarter <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Al Wakra Corniche"><span class="card-tag">Waterfront</span></div>
+        <div class="card-body">
+          <h3>The Corniche</h3>
+          <p>A beautifully landscaped promenade linking the old harbour to the new waterfront development, offering some of the most pleasant walking in Qatar outside of Doha.</p>
+          <a href="#" class="card-link">The Corniche <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE ROW — Why Visit -->
+<section class="section-pad bg-alt">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-img-wrap"><img src="images/placeholder.jpg" alt="Al Wakra Souq interior"></div>
+      <div class="feature-text">
+        <span class="section-label">A Living Heritage Town</span>
+        <h2>Why Al Wakra is Worth Every Minute</h2>
+        <p>Unlike many heritage sites around the world that feel like carefully curated museums, Al Wakra is a real town with a real community. The sounds of the souq — vendors calling, children laughing, the slap of fish on marble counters — are the sounds of a place that is fully, joyfully alive. That authenticity is Al Wakra's greatest gift to its visitors.</p>
+        <p>Just 15 minutes by car from central Doha, it demands very little planning and rewards generously. Come for a morning, stay for an afternoon. Let the pace of the place slow you down. Have fresh fish for lunch in a restaurant with no English menu. Watch the light change on the harbour. You will leave with a deeper sense of Qatar than any number of luxury hotel lobbies can provide.</p>
+        <a href="plan-trip.html" class="btn btn-primary" style="margin-top:16px;"><i class="fas fa-map-marked-alt"></i> Plan Your Trip to Al Wakra</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEARBY CITIES -->
+<section class="section-pad-sm">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:36px;">
+      <span class="section-label">Keep Exploring</span>
+      <h2 class="section-title">Other Cities in Qatar</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card"><div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Doha"><span class="card-tag">Capital City</span></div><div class="card-body"><h3>Doha</h3><p>Just 15 km north — the gleaming capital with world-class museums, the iconic Corniche, Souq Waqif, and an extraordinary skyline.</p><a href="doha.html" class="card-link">Discover Doha <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="card"><div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Mesaieed"><span class="card-tag">Beach &amp; Desert</span></div><div class="card-body"><h3>Mesaieed</h3><p>Continue south to Sealine Beach and the magical Khor Al Adaid Inland Sea — Qatar's most spectacular natural landscapes.</p><a href="mesaieed.html" class="card-link">Explore Mesaieed <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="card"><div class="card-img-wrap"><img src="images/placeholder.jpg" alt="Al Zubarah"><span class="card-tag">UNESCO Heritage</span></div><div class="card-body"><h3>Al Zubarah</h3><p>Qatar's UNESCO World Heritage archaeological site — the preserved ruins of an 18th-century pearling city on the north-west coast.</p><a href="al-zubarah.html" class="card-link">Visit Al Zubarah <i class="fas fa-arrow-right"></i></a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready to Discover Al Wakra?</h2>
+    <p>Just 15 minutes from Doha — Al Wakra is the perfect half-day escape into authentic Qatari heritage, seafood, and Gulf charm.</p>
+    <div class="btn-group">
+      <a href="plan-trip.html" class="btn btn-outline"><i class="fas fa-map-marked-alt"></i> Plan Your Trip</a>
+      <a href="dining.html" class="btn btn-outline"><i class="fas fa-utensils"></i> Dining Guide</a>
+      <a href="towns-cities.html" class="btn btn-outline"><i class="fas fa-city"></i> All Cities</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div><span>Visit Qatar</span></div>
+        <p>Your official guide to discovering the wonders of Qatar. From the shimmering skyline of Doha to the serene deserts and cultural heritage sites, we invite you to explore a land of extraordinary contrasts.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="about-qatar.html">About Qatar</a></li><li><a href="towns-cities.html">Towns &amp; Cities</a></li>
+        <li><a href="things-to-do.html">Things To Do</a></li><li><a href="plan-trip.html">Plan Your Trip</a></li>
+        <li><a href="visas.html">Visas &amp; Entry</a></li><li><a href="events.html">Events &amp; Festivals</a></li>
+        <li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+        <li><i class="fas fa-map-marker-alt"></i><span>Qatar Tourism Authority, West Bay, Doha, Qatar</span></li>
+        <li><i class="fas fa-phone"></i><span>+974 4000 1234</span></li>
+        <li><i class="fas fa-envelope"></i><span>info@visitqatar.qa</span></li>
+        <li><i class="fas fa-clock"></i><span>Sun – Thu: 8:00 AM – 5:00 PM</span></li>
+      </ul></div>
+      <div class="footer-col footer-newsletter"><h4>Newsletter</h4>
+        <p>Subscribe for the latest news, events, and travel inspiration from Qatar.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="text" placeholder="Your full name" required>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container"><div class="footer-bottom">
+    <span>&copy; 2025 Visit Qatar. All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a> &nbsp;|&nbsp; <a href="#">Sitemap</a></span>
+  </div></div>
+</footer>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="script.js"></script>
+</body>
+</html>
